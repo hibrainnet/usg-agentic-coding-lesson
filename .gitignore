@@ -1,0 +1,16 @@
+# 강사 전용 자료 - 학생 배포 제외
+instructor/
+
+# macOS
+.DS_Store
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+.venv/
+venv/
+
+# Node.js
+node_modules/
