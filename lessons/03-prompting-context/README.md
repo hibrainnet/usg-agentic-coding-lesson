@@ -31,12 +31,16 @@
 
 ### 실습 튜토리얼 (순서대로 진행)
 1. `tutorials/00-key-commands.md` — **핵심 커맨드 실전** (시나리오 5개로 /usage·/compact·/model·/code-review·/rewind 체험)
-2. `tutorials/01-prompt-comparison.md` — **나쁜 vs 좋은 프롬프트 비교** (contact-book으로 직접 결과 확인)
-3. `tutorials/02-create-claude-md.md` — **CLAUDE.md 작성** (/init → 규칙 추가 → 효과 확인)
-4. `tutorials/03-plan-mode.md` — **계획 모드** (/plan으로 복잡한 기능 사전 설계)
+2. `tutorials/01-prompt-comparison.md` — **나쁜 vs 좋은 프롬프트 비교** (contact-book, 15분)
+3. `tutorials/01b-prompt-comparison-advanced.md` — **프롬프트 비교 심화** (grade-manager, 실패 유형 3가지 직접 재현, 25분)
+4. `tutorials/02-create-claude-md.md` — **CLAUDE.md 작성** (/init → 규칙 추가 → 효과 확인)
+5. `tutorials/03-plan-mode.md` — **계획 모드** (/plan으로 복잡한 기능 사전 설계)
+
+> 시간이 충분하면 01 → 01b 순서로, 시간이 부족하면 01b만 진행합니다. 01b가 더 극적인 차이를 보여줍니다.
 
 ### 예제 자료
-- `examples/contact-book/` — 실습용 샘플 프로젝트 (모든 튜토리얼에서 사용)
+- `examples/contact-book/` — 기본 비교 실습용 (`01-prompt-comparison.md`)
+- `examples/todo-api/` — **심화 비교 실습용** (`01b-prompt-comparison-advanced.md`) — Flask REST API, 3파일 구조, 실패 유형 3가지 재현
 - `examples/prompt-cheatsheet.md` — **프롬프트 작성 참고 카드** (인쇄용)
 - `examples/sample-CLAUDE.md` — 잘 작성된 CLAUDE.md 예시
 
