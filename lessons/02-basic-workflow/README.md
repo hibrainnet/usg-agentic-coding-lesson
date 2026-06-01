@@ -24,8 +24,8 @@
 
 - `docs/01-environment-setup.md` — 설치 개요: 무엇을 왜 설치하는가
 - `docs/02-basic-workflow.md` — 기본 워크플로우 개념: 탐색·질문·수정·검증
-- `docs/03-slash-commands.md` — 슬래시 커맨드 & CLI 개요 (수업 중 빠른 참고)
-- `docs/04-slash-commands-deepdive.md` — **슬래시 커맨드 심화 가이드** (모든 커맨드 상세 설명 + 자습 실습 5선, 시간이 남으면 수업 중에, 아니면 자습용)
+- `docs/03-slash-commands.md` — 슬래시 커맨드 & CLI 전체 목록 (빠른 참고용)
+- `docs/04-slash-commands-deepdive.md` — 슬래시 커맨드 전체 상세 설명 (자습 레퍼런스 — 실전 활용은 3교시에서 다룸)
 - `tutorials/01-macos-setup.md` — **macOS 환경 설정 따라하기** (Ghostty · Homebrew · Git · Python3 · VSCode · Claude Code)
 - `tutorials/02-windows-setup.md` — **Windows 환경 설정 따라하기** (Windows Terminal · Git · Python3 · VSCode · Claude Code)
 - `tutorials/03-first-workflow.md` — **첫 번째 워크플로우** (To-Do CLI 탐색·수정)
@@ -44,8 +44,8 @@
 **기본 워크플로우**
 - [ ] 샘플 프로젝트(todo-cli)에 대한 코드 구조 설명 받기
 - [ ] 버그 1건을 Claude Code로 찾아 수정
-- [ ] `/help`, `/clear` 슬래시 커맨드 사용 경험
+- [ ] `/help`, `/clear`, `/exit` 세 커맨드 사용 경험
 
 ## 🔜 다음 시간 예고
 
-3교시에서는 더 나은 프롬프트를 작성하는 법과 `CLAUDE.md`로 프로젝트 컨텍스트를 주입하는 방법을 배웁니다.
+3교시에서는 슬래시 커맨드를 시나리오와 함께 실전으로 익히고, 더 나은 프롬프트를 작성하는 법과 `CLAUDE.md`로 프로젝트 컨텍스트를 주입하는 방법을 배웁니다.

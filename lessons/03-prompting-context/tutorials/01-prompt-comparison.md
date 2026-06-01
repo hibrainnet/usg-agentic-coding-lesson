@@ -2,16 +2,23 @@
 
 > 🎯 목표: 동일한 작업을 나쁜 프롬프트와 좋은 프롬프트로 각각 요청해서 결과 차이를 직접 확인한다.
 > ⏱️ 예상 시간: 15분
-> 💡 `examples/contact-book/` 프로젝트를 사용합니다.
+> 💡 커맨드 실습(`00-key-commands.md`)에 이어서 진행합니다. contact-book 폴더에서 시작합니다.
 
 ---
 
 ## 준비
 
-실습용 프로젝트 폴더로 이동합니다.
+앞 실습에서 이어지는 경우 `/clear`로 초기화합니다.
+
+```
+> /clear
+```
+
+처음 시작하는 경우 폴더로 이동 후 claude를 실행합니다.
 
 ```bash
 cd 경로/lessons/03-prompting-context/examples/contact-book
+claude
 ```
 
 기본 동작을 확인합니다.
