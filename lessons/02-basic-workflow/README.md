@@ -24,6 +24,7 @@
 
 - `docs/01-environment-setup.md` — 설치 개요: 무엇을 왜 설치하는가
 - `docs/02-basic-workflow.md` — 기본 워크플로우 개념: 탐색·질문·수정·검증
+- `docs/03-slash-commands.md` — **슬래시 커맨드 & CLI 전체 레퍼런스** (강의 후에도 계속 참고)
 - `tutorials/01-macos-setup.md` — **macOS 환경 설정 따라하기** (Ghostty · Homebrew · Git · Python3 · VSCode · Claude Code)
 - `tutorials/02-windows-setup.md` — **Windows 환경 설정 따라하기** (Windows Terminal · Git · Python3 · VSCode · Claude Code)
 - `tutorials/03-first-workflow.md` — **첫 번째 워크플로우** (To-Do CLI 탐색·수정)

@@ -16,17 +16,19 @@
 
 - Agentic Coding의 개념과 일반 코드 자동완성(Copilot 등)과의 차이를 설명할 수 있다.
 - 에이전트의 탐색→계획→실행→검증 루프를 이해하고, 사람의 역할이 무엇인지 설명할 수 있다.
-- Claude Code가 다른 코딩 도구와 구체적으로 어떻게 다른지 설명할 수 있다.
+- Claude Code의 도구(Tools) 시스템과 컨텍스트 윈도우 개념을 설명할 수 있다.
 
 ## 📂 자료 안내
 
-- `docs/01-what-is-agentic-coding.md` — Agentic Coding 개념 설명
-- `docs/02-why-claude-code.md` — Claude Code 소개와 도구 비교
+- `docs/01-what-is-agentic-coding.md` — Agentic Coding 개념·루프·한계
+- `docs/02-why-claude-code.md` — Claude Code 소개 · 도구(Tools) 시스템 · 컨텍스트 윈도우 · 권한 시스템
 
 ## ✅ 이번 시간 산출물(체크리스트)
 
 - [ ] Agentic Coding과 코드 자동완성의 차이를 설명할 수 있다
 - [ ] 탐색→계획→실행→검증 루프를 그림/말로 설명할 수 있다
+- [ ] Claude Code가 내부적으로 어떤 도구를 사용하는지 설명할 수 있다
+- [ ] 컨텍스트 윈도우가 무엇인지, 왜 `/clear`를 쓰는지 설명할 수 있다
 - [ ] "위임하되, 검증하라"는 원칙의 의미를 이해한다
 
 ## 🔜 다음 시간 예고
