@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>사과 게임</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: #1a1a2e;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      font-family: 'Segoe UI', sans-serif;
+      user-select: none;
+    }
+
+    h1 {
+      color: #ff6b6b;
+      font-size: 2rem;
+      margin-bottom: 12px;
+      text-shadow: 0 0 20px rgba(255,107,107,0.5);
+    }
+
+    #hud {
+      display: flex;
+      gap: 40px;
+      margin-bottom: 16px;
+      color: #eee;
+      font-size: 1.1rem;
+    }
+
+    #hud span { color: #ffd93d; font-weight: bold; }
+
+    #timer-bar-wrap {
+      width: 600px;
+      height: 10px;
+      background: #333;
+      border-radius: 5px;
+      margin-bottom: 14px;
+      overflow: hidden;
+    }
+
+    #timer-bar {
+      height: 100%;
+      background: linear-gradient(90deg, #ff6b6b, #ffd93d);
+      border-radius: 5px;
+      transition: width 1s linear, background 0.5s;
+    }
+
+    #game-container {
+      position: relative;
+      border: 3px solid #444;
+      border-radius: 8px;
+      overflow: hidden;
+      background: #16213e;
+      cursor: crosshair;
+    }
+
+    #grid {
+      display: grid;
+      grid-template-columns: repeat(17, 52px);
+      grid-template-rows: repeat(10, 52px);
+      gap: 2px;
+      padding: 4px;
+    }
+
+    .cell {
+      width: 52px;
+      height: 52px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 6px;
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: white;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
+      position: relative;
+      transition: transform 0.1s;
+      background: transparent;
+    }
+
+    .cell img {
+      position: absolute;
+      width: 46px;
+      height: 46px;
+      object-fit: contain;
+      pointer-events: none;
+    }
+
+    .cell .num {
+      position: relative;
+      z-index: 1;
+      font-size: 1.3rem;
+      font-weight: 900;
+      color: #fff;
+      text-shadow: 0 0 4px #000, 1px 1px 0 #000;
+    }
+
+    .cell.empty { visibility: hidden; pointer-events: none; }
+
+    .cell.selected img { filter: brightness(1.6) saturate(1.4); }
+    .cell.selected .num { color: #ffd93d; }
+    .cell.selected { transform: scale(1.08); }
+
+    .cell.over-ten img { filter: brightness(0.5) sepia(1) hue-rotate(0deg) saturate(3); }
+
+    #selection-rect {
+      position: absolute;
+      border: 2px dashed #ffd93d;
+      background: rgba(255, 217, 61, 0.12);
+      pointer-events: none;
+      border-radius: 4px;
+      display: none;
+    }
+
+    #message {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: rgba(0,0,0,0.88);
+      color: #fff;
+      padding: 40px 60px;
+      border-radius: 16px;
+      text-align: center;
+      font-size: 1.4rem;
+      border: 2px solid #ffd93d;
+      display: none;
+      z-index: 100;
+    }
+
+    #message h2 { color: #ffd93d; font-size: 2rem; margin-bottom: 16px; }
+    #message p { margin-bottom: 8px; color: #ccc; }
+    #message .final-score { color: #ff6b6b; font-size: 2.5rem; font-weight: 900; }
+
+    #restart-btn {
+      margin-top: 20px;
+      padding: 12px 32px;
+      font-size: 1.1rem;
+      background: #ff6b6b;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background 0.2s, transform 0.1s;
+    }
+
+    #restart-btn:hover { background: #ff4444; transform: scale(1.05); }
+
+    #hint {
+      color: #888;
+      font-size: 0.85rem;
+      margin-top: 10px;
+    }
+
+    .pop {
+      animation: pop 0.25s ease-out forwards;
+    }
+
+    @keyframes pop {
+      0%   { transform: scale(1.15); opacity: 1; }
+      100% { transform: scale(0); opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+
+<h1>🍎 사과 게임</h1>
+
+<div id="hud">
+  <div>점수: <span id="score-display">0</span></div>
+  <div>남은 사과: <span id="apple-count">170</span></div>
+  <div>시간: <span id="time-display">120</span>초</div>
+</div>
+
+<div id="timer-bar-wrap">
+  <div id="timer-bar" style="width:100%"></div>
+</div>
+
+<div id="game-container">
+  <div id="grid"></div>
+  <div id="selection-rect"></div>
+</div>
+
+<div id="hint">드래그로 사각형 영역을 선택하세요. 합이 10이 되면 사과가 사라집니다!</div>
+
+<div id="message">
+  <h2 id="msg-title">게임 종료!</h2>
+  <p>최종 점수</p>
+  <div class="final-score" id="msg-score">0</div>
+  <p id="msg-sub">수고하셨습니다!</p>
+  <button id="restart-btn" onclick="initGame()">다시 시작</button>
+</div>
+
+<script>
+const COLS = 17, ROWS = 10;
+const TOTAL_TIME = 120;
+
+let grid = [];
+let score = 0;
+let timeLeft = TOTAL_TIME;
+let timerInterval = null;
+let isDragging = false;
+let dragStart = null;
+let dragEnd = null;
+let gameActive = false;
+
+const gridEl = document.getElementById('grid');
+const selRect = document.getElementById('selection-rect');
+const scoreEl = document.getElementById('score-display');
+const appleCountEl = document.getElementById('apple-count');
+const timeEl = document.getElementById('time-display');
+const timerBarEl = document.getElementById('timer-bar');
+const messageEl = document.getElementById('message');
+const msgScore = document.getElementById('msg-score');
+const msgTitle = document.getElementById('msg-title');
+const msgSub = document.getElementById('msg-sub');
+const gameContainer = document.getElementById('game-container');
+
+function randInt(a, b) { return Math.floor(Math.random() * (b - a + 1)) + a; }
+
+function createGrid() {
+  grid = [];
+  for (let r = 0; r < ROWS; r++) {
+    grid[r] = [];
+    for (let c = 0; c < COLS; c++) {
+      grid[r][c] = randInt(1, 9);
+    }
+  }
+}
+
+function renderGrid() {
+  gridEl.innerHTML = '';
+  for (let r = 0; r < ROWS; r++) {
+    for (let c = 0; c < COLS; c++) {
+      const cell = document.createElement('div');
+      cell.className = 'cell';
+      cell.dataset.r = r;
+      cell.dataset.c = c;
+
+      if (grid[r][c] === 0) {
+        cell.classList.add('empty');
+      } else {
+        const img = document.createElement('img');
+        img.src = 'assets/apple-pixel.png';
+        img.draggable = false;
+        cell.appendChild(img);
+        const num = document.createElement('span');
+        num.className = 'num';
+        num.textContent = grid[r][c];
+        cell.appendChild(num);
+      }
+      gridEl.appendChild(cell);
+    }
+  }
+}
+
+function getCellEl(r, c) {
+  return gridEl.children[r * COLS + c];
+}
+
+function getGridPos(clientX, clientY) {
+  const rect = gridEl.getBoundingClientRect();
+  const x = clientX - rect.left - 4;
+  const y = clientY - rect.top - 4;
+  const cellW = 54, cellH = 54;
+  const c = Math.floor(x / cellW);
+  const r = Math.floor(y / cellH);
+  return {
+    r: Math.max(0, Math.min(ROWS - 1, r)),
+    c: Math.max(0, Math.min(COLS - 1, c))
+  };
+}
+
+function getSelection(start, end) {
+  const r1 = Math.min(start.r, end.r);
+  const r2 = Math.max(start.r, end.r);
+  const c1 = Math.min(start.c, end.c);
+  const c2 = Math.max(start.c, end.c);
+  return { r1, r2, c1, c2 };
+}
+
+function sumSelection(sel) {
+  let sum = 0;
+  for (let r = sel.r1; r <= sel.r2; r++)
+    for (let c = sel.c1; c <= sel.c2; c++)
+      sum += grid[r][c];
+  return sum;
+}
+
+function updateSelectionHighlight() {
+  for (let r = 0; r < ROWS; r++)
+    for (let c = 0; c < COLS; c++) {
+      const el = getCellEl(r, c);
+      el.classList.remove('selected', 'over-ten');
+    }
+
+  if (!dragStart || !dragEnd) return;
+
+  const sel = getSelection(dragStart, dragEnd);
+  const sum = sumSelection(sel);
+  const isOver = sum > 10;
+
+  for (let r = sel.r1; r <= sel.r2; r++) {
+    for (let c = sel.c1; c <= sel.c2; c++) {
+      if (grid[r][c] > 0) {
+        const el = getCellEl(r, c);
+        el.classList.add(isOver ? 'over-ten' : 'selected');
+      }
+    }
+  }
+
+  updateSelectionRect(sel);
+}
+
+function updateSelectionRect(sel) {
+  const gridRect = gameContainer.getBoundingClientRect();
+  const containerRect = gameContainer.getBoundingClientRect();
+  const cellW = 54, cellH = 54;
+  const pad = 4;
+
+  const x = pad + sel.c1 * cellW;
+  const y = pad + sel.r1 * cellH;
+  const w = (sel.c2 - sel.c1 + 1) * cellW - 2;
+  const h = (sel.r2 - sel.r1 + 1) * cellH - 2;
+
+  selRect.style.left = x + 'px';
+  selRect.style.top = y + 'px';
+  selRect.style.width = w + 'px';
+  selRect.style.height = h + 'px';
+  selRect.style.display = 'block';
+}
+
+function commitSelection() {
+  if (!dragStart || !dragEnd) return;
+
+  const sel = getSelection(dragStart, dragEnd);
+  const sum = sumSelection(sel);
+
+  if (sum === 10) {
+    let removed = 0;
+    for (let r = sel.r1; r <= sel.r2; r++) {
+      for (let c = sel.c1; c <= sel.c2; c++) {
+        if (grid[r][c] > 0) {
+          grid[r][c] = 0;
+          removed++;
+          const el = getCellEl(r, c);
+          el.classList.add('pop');
+          el.addEventListener('animationend', () => {
+            el.classList.add('empty');
+            el.classList.remove('pop', 'selected');
+          }, { once: true });
+        }
+      }
+    }
+    score += removed;
+    updateHUD();
+    checkWin();
+  }
+
+  clearSelection();
+}
+
+function clearSelection() {
+  dragStart = null;
+  dragEnd = null;
+  selRect.style.display = 'none';
+  for (let r = 0; r < ROWS; r++)
+    for (let c = 0; c < COLS; c++)
+      getCellEl(r, c).classList.remove('selected', 'over-ten');
+}
+
+function countApples() {
+  let n = 0;
+  for (let r = 0; r < ROWS; r++)
+    for (let c = 0; c < COLS; c++)
+      if (grid[r][c] > 0) n++;
+  return n;
+}
+
+function updateHUD() {
+  scoreEl.textContent = score;
+  appleCountEl.textContent = countApples();
+  timeEl.textContent = timeLeft;
+  const pct = (timeLeft / TOTAL_TIME) * 100;
+  timerBarEl.style.width = pct + '%';
+  if (pct <= 25) timerBarEl.style.background = '#ff4444';
+  else if (pct <= 50) timerBarEl.style.background = 'linear-gradient(90deg, #ff6b6b, #ffd93d)';
+}
+
+function checkWin() {
+  if (countApples() === 0) {
+    endGame(true);
+  }
+}
+
+function endGame(cleared) {
+  gameActive = false;
+  clearInterval(timerInterval);
+  selRect.style.display = 'none';
+
+  msgScore.textContent = score;
+  if (cleared) {
+    msgTitle.textContent = '완전 클리어! 🎉';
+    msgSub.textContent = '모든 사과를 없앴습니다!';
+  } else {
+    msgTitle.textContent = '시간 종료!';
+    const remaining = countApples();
+    msgSub.textContent = `남은 사과: ${remaining}개`;
+  }
+  messageEl.style.display = 'block';
+}
+
+function initGame() {
+  messageEl.style.display = 'none';
+  score = 0;
+  timeLeft = TOTAL_TIME;
+  gameActive = true;
+  clearInterval(timerInterval);
+
+  createGrid();
+  renderGrid();
+  updateHUD();
+
+  timerInterval = setInterval(() => {
+    if (!gameActive) return;
+    timeLeft--;
+    updateHUD();
+    if (timeLeft <= 0) endGame(false);
+  }, 1000);
+}
+
+// Mouse events
+gameContainer.addEventListener('mousedown', (e) => {
+  if (!gameActive) return;
+  e.preventDefault();
+  isDragging = true;
+  dragStart = getGridPos(e.clientX, e.clientY);
+  dragEnd = { ...dragStart };
+  updateSelectionHighlight();
+});
+
+document.addEventListener('mousemove', (e) => {
+  if (!isDragging || !gameActive) return;
+  dragEnd = getGridPos(e.clientX, e.clientY);
+  updateSelectionHighlight();
+});
+
+document.addEventListener('mouseup', (e) => {
+  if (!isDragging) return;
+  isDragging = false;
+  if (gameActive) commitSelection();
+  else clearSelection();
+});
+
+// Touch events
+gameContainer.addEventListener('touchstart', (e) => {
+  if (!gameActive) return;
+  e.preventDefault();
+  const t = e.touches[0];
+  isDragging = true;
+  dragStart = getGridPos(t.clientX, t.clientY);
+  dragEnd = { ...dragStart };
+  updateSelectionHighlight();
+}, { passive: false });
+
+document.addEventListener('touchmove', (e) => {
+  if (!isDragging || !gameActive) return;
+  e.preventDefault();
+  const t = e.touches[0];
+  dragEnd = getGridPos(t.clientX, t.clientY);
+  updateSelectionHighlight();
+}, { passive: false });
+
+document.addEventListener('touchend', () => {
+  if (!isDragging) return;
+  isDragging = false;
+  if (gameActive) commitSelection();
+  else clearSelection();
+});
+
+initGame();
+</script>
+</body>
+</html>
