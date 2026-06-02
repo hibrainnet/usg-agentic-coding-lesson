@@ -33,9 +33,12 @@ pytest test_app.py -v
 ## 서버 실행
 
 ```bash
-python app.py
+python3 app.py
 # http://localhost:4000 에서 실행됨
+# 종료: Ctrl+C
 ```
+
+> curl 테스트는 별도 터미널 탭에서 실행하세요. 서버 탭에서 Ctrl+C를 누르면 프로세스가 완전히 종료됩니다.
 
 ## API 동작 확인 (curl)
 

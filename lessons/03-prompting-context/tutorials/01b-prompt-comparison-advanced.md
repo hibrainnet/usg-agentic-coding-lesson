@@ -143,15 +143,20 @@ git checkout -- app.py models.py test_app.py
 pytest test_app.py -v
 ```
 
-실제 서버로도 확인하고 싶다면:
+실제 서버로도 확인하고 싶다면 **터미널 탭을 하나 더 열어서** 서버를 실행합니다.
+
 ```bash
-python3 app.py &
-curl "http://localhost:4000/todos" -s | python3 -m json.tool
-# 테스트 데이터 추가
+# [새 터미널 탭] — 서버 실행
+source .venv/bin/activate
+python3 app.py
+# 확인 후 Ctrl+C 로 종료
+```
+
+```bash
+# [기존 터미널 탭] — 동작 확인
 curl -X POST http://localhost:4000/todos -H "Content-Type: application/json" -d '{"title":"우유 사기"}'
 curl -X POST http://localhost:4000/todos -H "Content-Type: application/json" -d '{"title":"빵 사기"}'
 curl "http://localhost:4000/todos?q=우유" -s | python3 -m json.tool
-kill %1
 ```
 
 **두 프롬프트의 차이:**
@@ -239,14 +244,21 @@ git checkout -- app.py models.py test_app.py
 pytest test_app.py -v
 ```
 
+실제 동작을 확인하려면 **터미널 탭을 하나 더 열어서** 서버를 실행합니다.
+
 ```bash
-# 실제 동작 확인
-python3 app.py &
+# [새 터미널 탭] — 서버 실행
+source .venv/bin/activate
+python3 app.py
+# 확인 후 Ctrl+C 로 종료
+```
+
+```bash
+# [기존 터미널 탭] — 동작 확인
 curl -X POST http://localhost:4000/todos \
      -H "Content-Type: application/json" \
      -d '{"title": ""}' -s | python3 -m json.tool
 # {"error": "title은 필수입니다."} 가 나와야 함
-kill %1
 ```
 
 **두 프롬프트의 차이:**
@@ -340,9 +352,17 @@ git checkout -- app.py models.py test_app.py
 pytest test_app.py -v
 ```
 
+실제 응답 구조를 확인하려면 **터미널 탭을 하나 더 열어서** 서버를 실행합니다.
+
 ```bash
-# 실제 응답 구조 확인
-python3 app.py &
+# [새 터미널 탭] — 서버 실행
+source .venv/bin/activate
+python3 app.py
+# 확인 후 Ctrl+C 로 종료
+```
+
+```bash
+# [기존 터미널 탭] — 응답 구조 확인
 curl -X POST http://localhost:4000/todos \
      -H "Content-Type: application/json" \
      -d '{"title": "우유 사기"}' -s | python3 -m json.tool
@@ -350,7 +370,6 @@ curl -X POST http://localhost:4000/todos \
 
 curl http://localhost:4000/todos/999 -s | python3 -m json.tool
 # {"success": false, "error": "항목을 찾을 수 없습니다."}
-kill %1
 ```
 
 **두 프롬프트의 차이:**
