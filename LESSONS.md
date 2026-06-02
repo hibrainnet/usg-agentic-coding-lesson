@@ -24,6 +24,8 @@
 - **학습 목표**
   - Agentic Coding의 개념과 일반 코드 자동완성(Copilot 등)과의 차이를 설명할 수 있다.
   - 에이전트의 탐색→계획→실행→검증 루프를 이해하고, 사람의 역할이 무엇인지 설명할 수 있다.
+- **발표자료**
+  - [USG 공유대학 Agentic Coding 특강 - Lesson 1](https://drive.google.com/file/d/1GDb72t-8lCKDdlQT-pbHayfGrJKLtz4R/view?usp=share_link)  
 - **실습**
   - 강사 라이브 데모 관찰: Claude Code가 버그를 찾고 수정하는 과정 (탐색→계획→실행→검증 루프 실물 확인)
   - 자동완성 vs Agentic Coding 비교 토론
@@ -36,6 +38,8 @@
   - macOS 또는 Windows 환경에 개발 도구(터미널·Git·Python·VSCode·Claude Code)를 설치하고 동작을 확인할 수 있다.
   - 기존 코드베이스를 Claude Code로 탐색하고 이해할 수 있다.
   - 자연어 요청으로 코드를 수정하고 변경 사항을 리뷰할 수 있다.
+- **발표자료**
+  - [USG 공유대학 Agentic Coding 특강 - Lesson 2](https://drive.google.com/file/d/1iqumZuaDQuqSnqOOk22DRNZsnGzHBEM7/view?usp=share_link)  
 - **실습**
   - OS 선택 후 단계별 설치 진행 (Ghostty/Windows Terminal → Homebrew/Git → Python3 → VSCode → Claude Code)
   - 설치 검증 및 Claude Code 첫 실행·인증
@@ -49,6 +53,8 @@
 - **학습 목표**
   - 모호한 요청과 좋은 요청의 차이를 이해하고 효과적인 프롬프트를 작성할 수 있다.
   - CLAUDE.md로 프로젝트 규칙·관례를 에이전트에게 전달할 수 있다.
+- **발표자료**
+  - [USG 공유대학 Agentic Coding 특강 - Lesson 3](https://drive.google.com/file/d/1ukd3EidqjSuSXDZ0akfK0I_ZRyE5wzVm/view?usp=share_link)  
 - **실습**
   - 동일 작업을 나쁜 프롬프트 vs 좋은 프롬프트로 요청하여 결과 비교
   - `/init`으로 CLAUDE.md 생성 후 코딩 컨벤션·명령어 추가
@@ -113,4 +119,9 @@ lessons/
 - `tutorials/` : 단계별 실습 가이드(따라하기)
 - `examples/`  : 예제 코드·샘플 프로젝트
 - `assets/`    : 이미지·다이어그램 등 보조 자료
-```
+
+## 발표자료
+
+- [USG 공유대학 Agentic Coding 특강 - Lesson 1](https://drive.google.com/file/d/1GDb72t-8lCKDdlQT-pbHayfGrJKLtz4R/view?usp=share_link)
+- [USG 공유대학 Agentic Coding 특강 - Lesson 2](https://drive.google.com/file/d/1iqumZuaDQuqSnqOOk22DRNZsnGzHBEM7/view?usp=share_link)
+- [USG 공유대학 Agentic Coding 특강 - Lesson 3](https://drive.google.com/file/d/1ukd3EidqjSuSXDZ0akfK0I_ZRyE5wzVm/view?usp=share_link)
