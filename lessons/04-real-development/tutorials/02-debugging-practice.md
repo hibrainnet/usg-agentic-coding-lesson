@@ -2,54 +2,14 @@
 
 ## 준비
 
-`examples/task-manager/task_manager.py`에는 **의도적으로 심어둔 버그 3개**가 있습니다.  
+`examples/task-manager/task_manager.py`에는 **의도적으로 심어둔 버그 2개**가 있습니다.  
 에러 메시지를 에이전트에게 전달해서 버그를 찾고 수정해봅니다.
 
 > 힌트 없이 먼저 혼자 찾아보려고 시도해보세요. 막히면 에이전트에게 물어보세요.
 
 ---
 
-## 버그 1: 첫 번째 태스크 추가 오류
-
-### 재현 방법
-
-```bash
-python task_manager.py
-```
-
-실행 후 메뉴에서 `1. 태스크 추가`를 선택하고 제목을 입력합니다.  
-**태스크 목록이 비어있는 상태에서** 첫 번째 태스크를 추가해보세요.
-
-### 발생하는 에러
-
-```
-Traceback (most recent call last):
-  File "task_manager.py", line XX, in add_task
-    task_id = tasks[-1]["id"] + 1
-IndexError: list index out of range
-```
-
-### 에이전트에게 전달하는 방법
-
-위 에러 메시지를 복사해서 다음과 같이 전달합니다.
-
-```
-task_manager.py에서 태스크가 하나도 없을 때 새 태스크를 추가하면
-다음 에러가 납니다:
-
-[에러 메시지 붙여넣기]
-
-태스크가 없을 때도 id=1로 태스크가 정상적으로 추가되어야 합니다.
-원인을 찾아서 수정해줘.
-```
-
-### 수정 확인
-
-수정 후 다시 실행해서 빈 목록에서도 태스크가 추가되는지 확인합니다.
-
----
-
-## 버그 2: 빈 제목 태스크 추가 허용
+## 버그 1: 빈 제목 태스크 추가 허용
 
 ### 재현 방법
 
@@ -68,17 +28,20 @@ python task_manager.py
 
 ```
 task_manager.py에서 태스크 제목을 빈 문자열로 입력해도 태스크가 추가됩니다.
-제목이 비어있으면 추가를 막고 "제목을 입력해주세요." 라는 메시지를 출력해야 합니다.
-add_task 함수에 이 검증을 추가해줘.
+add_task 함수에서 title이 비어있으면 ValueError를 발생시키도록 수정해줘.
 ```
 
 ### 수정 확인
 
-수정 후 빈 제목으로 추가를 시도했을 때 적절한 메시지가 나오는지 확인합니다.
+수정 후 테스트를 실행해서 확인합니다.
+
+```bash
+pytest test_task_manager.py -v -k "empty_title"
+```
 
 ---
 
-## 버그 3: 태스크 삭제 ID 오류
+## 버그 2: 태스크 삭제 ID 오류
 
 ### 재현 방법
 
@@ -88,7 +51,7 @@ add_task 함수에 이 검증을 추가해줘.
 ### 발생하는 문제
 
 에러 없이 "삭제했습니다" 메시지가 출력되지만, 실제로 아무것도 삭제되지 않습니다.  
-존재하지 않는 ID 삭제 시 에러 메시지를 출력해야 합니다.
+존재하지 않는 ID 삭제 시 `False`를 반환해야 합니다.
 
 ### 에이전트에게 전달하는 방법
 
@@ -96,19 +59,23 @@ add_task 함수에 이 검증을 추가해줘.
 task_manager.py에서 존재하지 않는 ID로 태스크 삭제를 시도하면
 성공 메시지가 출력되지만 실제로는 아무것도 삭제되지 않습니다.
 
-존재하지 않는 ID를 삭제 시도할 때는 "해당 ID의 태스크가 없습니다." 메시지를 출력해야 합니다.
+존재하지 않는 ID를 삭제 시도할 때는 False를 반환해야 합니다.
 delete_task 함수를 수정해줘.
 ```
 
 ### 수정 확인
 
-수정 후 다시 테스트해서 잘못된 ID로 삭제 시 올바른 메시지가 나오는지 확인합니다.
+수정 후 테스트를 실행합니다.
+
+```bash
+pytest test_task_manager.py -v -k "delete"
+```
 
 ---
 
 ## 테스트로 검증하기
 
-버그를 모두 수정했으면, 테스트를 실행해서 수정이 올바른지 확인합니다.
+버그를 모두 수정했으면, 전체 테스트를 실행해서 수정이 올바른지 확인합니다.
 
 ```bash
 pytest test_task_manager.py -v
@@ -118,7 +85,7 @@ pytest test_task_manager.py -v
 
 ```
 pytest 결과:
-FAILED test_task_manager.py::test_add_task_empty_title
+FAILED test_task_manager.py::test_add_task_empty_title_raises
 
 [전체 pytest 출력 붙여넣기]
 
@@ -129,8 +96,7 @@ FAILED test_task_manager.py::test_add_task_empty_title
 
 ## 체크리스트
 
-- [ ] 버그 1: 빈 목록에서 태스크 추가 오류를 수정했다
-- [ ] 버그 2: 빈 제목 태스크 추가를 막는 검증을 추가했다
-- [ ] 버그 3: 존재하지 않는 ID 삭제 시 적절한 메시지를 출력한다
+- [ ] 버그 1: 빈 제목 태스크 추가를 막는 ValueError 검증을 추가했다
+- [ ] 버그 2: 존재하지 않는 ID 삭제 시 False를 반환한다
 - [ ] 수정 후 pytest 전체 테스트를 통과했다
 - [ ] 각 버그의 원인을 이해했다

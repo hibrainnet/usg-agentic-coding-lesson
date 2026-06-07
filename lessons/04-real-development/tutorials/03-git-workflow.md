@@ -55,10 +55,9 @@ git add lessons/04-real-development/examples/task-manager/test_task_manager.py
 방금 한 변경 사항을 바탕으로 Git 커밋 메시지를 작성해줘.
 
 변경 내용:
-1. 빈 목록에서 첫 태스크 추가 시 IndexError 버그 수정
-2. 빈 제목 태스크 추가 방지 검증 추가
-3. 존재하지 않는 ID 삭제 시 에러 메시지 출력
-4. complete_task 기능 추가 (테스트 포함)
+1. 빈 제목 태스크 추가 방지 검증 추가 (ValueError 발생)
+2. 존재하지 않는 ID 삭제 시 False 반환
+3. complete_task 기능 추가 (테스트 포함)
 
 커밋 메시지 형식: 제목(50자 이내) + 빈 줄 + 상세 설명
 ```
@@ -70,9 +69,8 @@ git add lessons/04-real-development/examples/task-manager/test_task_manager.py
 ```
 fix: task-manager 버그 수정 및 complete_task 기능 추가
 
-- 빈 목록에서 태스크 추가 시 IndexError 버그 수정 (#1)
-- 빈 제목 태스크 추가 방지를 위한 입력 검증 추가 (#2)
-- 존재하지 않는 ID 삭제 시 에러 메시지 출력 (#3)
+- 빈 제목 태스크 추가 방지를 위한 ValueError 검증 추가 (#1)
+- 존재하지 않는 ID 삭제 시 False 반환 (#2)
 - complete_task(task_id) 함수 구현 및 테스트 추가
 ```
 
