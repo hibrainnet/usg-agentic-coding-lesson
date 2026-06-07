@@ -6,8 +6,8 @@ tasks = []
 
 
 def add_task(title):
-    # BUG 1: tasks가 비어있을 때 tasks[-1]에 접근하면 IndexError 발생
-    task_id = tasks[-1]["id"] + 1
+    # BUG 1: 빈 제목 검증 없음 — 빈 문자열 태스크가 추가됨
+    task_id = tasks[-1]["id"] + 1 if tasks else 1
     task = {"id": task_id, "title": title, "done": False}
     tasks.append(task)
     return task
@@ -25,12 +25,20 @@ def get_task(task_id):
 
 
 def delete_task(task_id):
-    # BUG 3: 존재하지 않는 ID를 삭제해도 성공 메시지 출력 (실제 삭제 없음)
+    # BUG 2: 존재하지 않는 ID를 삭제해도 True 반환 (실제 삭제 없음)
     for i, task in enumerate(tasks):
         if task["id"] == task_id:
             tasks.pop(i)
             return True
     return True  # 없는 ID도 True 반환 (버그)
+
+
+def complete_task(task_id):
+    task = get_task(task_id)
+    if task is None:
+        return None
+    task["done"] = True
+    return task
 
 
 def get_pending_tasks():
@@ -54,7 +62,6 @@ def main():
 
         if choice == "1":
             title = input("태스크 제목: ").strip()
-            # BUG 2: 빈 제목 검증 없음 — 빈 문자열 태스크가 추가됨
             task = add_task(title)
             print(f"추가됨: [{task['id']}] {task['title']}")
 

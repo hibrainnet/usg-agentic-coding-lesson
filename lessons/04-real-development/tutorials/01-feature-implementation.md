@@ -28,6 +28,8 @@ pytest test_task_manager.py -v
 
 결과를 보고 어떤 테스트가 있는지 파악합니다.
 
+> `test_add_task_empty_title_raises`와 `test_delete_task_returns_false_for_missing` 2개는 의도적인 버그로 실패합니다 — Tutorial 02에서 수정합니다.
+
 ---
 
 ## Step 2: 구현할 기능 정의하기
@@ -96,7 +98,8 @@ complete_task(task_id) 함수를 task_manager.py에 구현해줘.
 pytest test_task_manager.py -v
 ```
 
-모든 테스트가 통과하면 성공입니다.
+complete_task 관련 테스트가 모두 통과하면 성공입니다.  
+`test_add_task_empty_title_raises`와 `test_delete_task_returns_false_for_missing` 2개는 Tutorial 02에서 수정할 버그로 인해 아직 실패합니다 — 정상입니다.
 
 ---
 
@@ -111,6 +114,14 @@ pytest test_task_manager.py -v
 - 결과가 없으면 빈 리스트를 반환한다
 
 테스트 먼저 → 구현 순서로 진행해보세요.
+
+전체 테스트를 실행하면:
+
+```bash
+pytest test_task_manager.py -v
+```
+
+`test_add_task_empty_title_raises`와 `test_delete_task_returns_false_for_missing` 2개는 여전히 실패합니다 — Tutorial 02에서 수정할 버그이므로 정상입니다.
 
 ---
 
