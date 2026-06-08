@@ -1,5 +1,5 @@
 """
-태스크 관리 앱 (실습용)
+태스크 관리 앱 (5교시 실습용 — 4교시 완성본)
 """
 
 tasks = []
@@ -54,8 +54,10 @@ def main():
     while True:
         print("\n1. 태스크 추가")
         print("2. 태스크 목록")
-        print("3. 태스크 삭제")
-        print("4. 완료된 태스크 보기")
+        print("3. 태스크 완료 처리")
+        print("4. 태스크 삭제")
+        print("5. 완료된 태스크 보기")
+        print("6. 미완료 태스크 보기")
         print("0. 종료")
 
         choice = input("\n선택: ").strip()
@@ -76,6 +78,18 @@ def main():
 
         elif choice == "3":
             try:
+                task_id = int(input("완료 처리할 태스크 ID: "))
+            except ValueError:
+                print("올바른 ID를 입력해주세요.")
+                continue
+            result = complete_task(task_id)
+            if result:
+                print(f"완료 처리했습니다: [{result['id']}] {result['title']}")
+            else:
+                print("해당 태스크를 찾을 수 없습니다.")
+
+        elif choice == "4":
+            try:
                 task_id = int(input("삭제할 태스크 ID: "))
             except ValueError:
                 print("올바른 ID를 입력해주세요.")
@@ -83,14 +97,24 @@ def main():
             result = delete_task(task_id)
             if result:
                 print("삭제했습니다.")
+            else:
+                print("해당 태스크를 찾을 수 없습니다.")
 
-        elif choice == "4":
+        elif choice == "5":
             done = get_done_tasks()
             if not done:
                 print("완료된 태스크가 없습니다.")
             else:
                 for task in done:
                     print(f"  ✓ [{task['id']}] {task['title']}")
+
+        elif choice == "6":
+            pending = get_pending_tasks()
+            if not pending:
+                print("미완료 태스크가 없습니다.")
+            else:
+                for task in pending:
+                    print(f"  ○ [{task['id']}] {task['title']}")
 
         elif choice == "0":
             print("종료합니다.")

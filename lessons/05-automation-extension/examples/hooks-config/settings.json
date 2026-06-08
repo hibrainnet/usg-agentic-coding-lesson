@@ -5,7 +5,11 @@
         "hooks": [
           {
             "type": "command",
-            "command": "echo '✅ Claude 작업 완료!'"
+            "command": "echo 'Claude 작업 완료!'"
+          },
+          {
+            "type": "command",
+            "command": "afplay /System/Library/Sounds/Glass.aiff"
           }
         ]
       }
@@ -16,7 +20,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "black . --quiet 2>/dev/null || true"
+            "command": "cd lessons/05-automation-extension/examples/task-manager && python -m pytest --tb=short -q || true"
           }
         ]
       }
