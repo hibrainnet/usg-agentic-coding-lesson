@@ -16,7 +16,7 @@
 import json
 import os
 
-NOTES_FILE = "notes.json"
+NOTES_FILE = os.path.join(os.path.dirname(__file__), "notes.json")
 notes = []
 
 

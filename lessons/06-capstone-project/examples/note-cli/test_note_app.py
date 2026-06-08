@@ -2,6 +2,7 @@
 note_app.py 테스트
 """
 
+import os
 import pytest
 import note_app
 
@@ -10,8 +11,12 @@ import note_app
 def clear_notes():
     """각 테스트 전후로 notes 리스트와 파일을 초기화한다."""
     note_app.notes.clear()
+    if os.path.exists(note_app.NOTES_FILE):
+        os.remove(note_app.NOTES_FILE)
     yield
     note_app.notes.clear()
+    if os.path.exists(note_app.NOTES_FILE):
+        os.remove(note_app.NOTES_FILE)
 
 
 # ── add_note 테스트 ─────────────────────────────────────────────────────────
@@ -60,6 +65,8 @@ def test_get_note_returns_correct_note():
 
 
 def test_get_note_returns_none_for_missing():
+    note_app.add_note("있는 메모", "내용")
+    assert note_app.get_note(1) is not None  # 추가된 메모가 실제로 조회되어야 함
     result = note_app.get_note(999)
     assert result is None
 
@@ -68,6 +75,7 @@ def test_get_note_returns_none_for_missing():
 
 def test_delete_note_removes_note():
     note_app.add_note("삭제할 메모", "내용")
+    assert note_app.get_note(1) is not None  # 삭제 전 메모가 실제로 존재해야 함
     note_app.delete_note(1)
     assert note_app.get_note(1) is None
 

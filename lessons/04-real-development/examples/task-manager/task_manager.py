@@ -6,8 +6,7 @@ tasks = []
 
 
 def add_task(title):
-    if not title or not title.strip():
-        raise ValueError("태스크 제목은 비어 있을 수 없습니다.")
+    # BUG 1: 빈 제목 검증 없음 — 빈 문자열 태스크가 추가됨
     task_id = tasks[-1]["id"] + 1 if tasks else 1
     task = {"id": task_id, "title": title, "done": False}
     tasks.append(task)
@@ -26,19 +25,12 @@ def get_task(task_id):
 
 
 def delete_task(task_id):
+    # BUG 2: 존재하지 않는 ID를 삭제해도 True 반환 (실제 삭제 없음)
     for i, task in enumerate(tasks):
         if task["id"] == task_id:
             tasks.pop(i)
             return True
-    return False
-
-
-def complete_task(task_id):
-    task = get_task(task_id)
-    if task is None:
-        return None
-    task["done"] = True
-    return task
+    return True  # 없는 ID도 True 반환 (버그)
 
 
 def get_pending_tasks():

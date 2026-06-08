@@ -93,15 +93,4 @@ def test_get_done_tasks_returns_empty_initially():
 
 
 # ── complete_task 테스트 ────────────────────────────────────────────────────
-
-def test_complete_task_sets_done_true():
-    """존재하는 태스크를 완료 처리하면 done이 True가 된다."""
-    task_manager.add_task("완료할 태스크")
-    result = task_manager.complete_task(1)
-    assert result["done"] is True
-
-
-def test_complete_task_returns_none_for_missing():
-    """존재하지 않는 id로 호출하면 None을 반환한다."""
-    result = task_manager.complete_task(999)
-    assert result is None
+# 실습 1에서 직접 작성합니다.
