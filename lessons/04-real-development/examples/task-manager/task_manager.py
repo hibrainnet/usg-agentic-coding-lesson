@@ -54,8 +54,11 @@ def main():
 
         if choice == "1":
             title = input("태스크 제목: ").strip()
-            task = add_task(title)
-            print(f"추가됨: [{task['id']}] {task['title']}")
+            try:
+                task = add_task(title)
+                print(f"추가됨: [{task['id']}] {task['title']}")
+            except ValueError as e:
+                print(f"오류: {e}")
 
         elif choice == "2":
             all_tasks = get_tasks()
@@ -75,11 +78,13 @@ def main():
             result = delete_task(task_id)
             if result:
                 print("삭제했습니다.")
+            else:
+                print("해당 태스크를 찾을 수 없습니다.")
 
         elif choice == "4":
             done = get_done_tasks()
             if not done:
-                print("완료된 태스크가 없습니다.")
+                print("완료된 태스크가 없습니다. (실습 1에서 complete_task 구현 후 사용 가능)")
             else:
                 for task in done:
                     print(f"  ✓ [{task['id']}] {task['title']}")

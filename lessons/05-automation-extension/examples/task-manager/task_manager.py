@@ -64,8 +64,11 @@ def main():
 
         if choice == "1":
             title = input("태스크 제목: ").strip()
-            task = add_task(title)
-            print(f"추가됨: [{task['id']}] {task['title']}")
+            try:
+                task = add_task(title)
+                print(f"추가됨: [{task['id']}] {task['title']}")
+            except ValueError as e:
+                print(f"오류: {e}")
 
         elif choice == "2":
             all_tasks = get_tasks()
