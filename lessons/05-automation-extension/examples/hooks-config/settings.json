@@ -9,6 +9,10 @@
           },
           {
             "type": "command",
+            "command": "terminal-notifier -message 'Claude 작업 완료!' -title 'Claude Code'"
+          },
+          {
+            "type": "command",
             "command": "afplay /System/Library/Sounds/Glass.aiff"
           }
         ]
