@@ -67,6 +67,8 @@
 - **학습 목표**
   - 작은 기능을 요구사항부터 구현·테스트까지 에이전트와 함께 완성할 수 있다.
   - 버그를 재현·진단·수정하는 디버깅 루프를 수행할 수 있다.
+- **발표자료**
+  - [USG 공유대학 Agentic Coding 특강 - Lesson 4](https://drive.google.com/file/d/1VN3vF8pDaECyjLN-5kkqZuNTIJLicsOe/view?usp=share_link)  
 - **실습**
   - 샘플 앱에 신규 기능 추가(요구사항 → 구현 → 테스트)
   - 의도적으로 심어둔 버그를 에러 로그와 함께 디버깅
@@ -79,6 +81,8 @@
 - **학습 목표**
   - 자주 쓰는 작업을 커스텀 커맨드/훅으로 자동화할 수 있다.
   - MCP와 서브에이전트의 개념을 이해하고 간단히 활용할 수 있다.
+- **발표자료**
+  - [USG 공유대학 Agentic Coding 특강 - Lesson 5](https://drive.google.com/file/d/1qJBM20sazQwDqmG1JMuGhFsDU24AATJ5/view?usp=share_link)  
 - **실습**
   - 나만의 슬래시 커맨드 만들기(예: 코드 리뷰, 커밋 메시지 생성)
   - 간단한 훅 설정(예: 작업 완료 알림, 포맷 자동 실행)
@@ -91,6 +95,8 @@
 - **학습 목표**
   - 처음부터 끝까지 작은 프로젝트를 에이전트와 함께 완성할 수 있다.
   - Claude Code 활용의 베스트 프랙티스와 주의점을 설명할 수 있다.
+- **발표자료**
+  - [USG 공유대학 Agentic Coding 특강 - Lesson 6](https://drive.google.com/file/d/1KvR9OwVGZAvIxWgRK1TmvfIrHDmNb9cr/view?usp=share_link)  
 - **실습**
   - 미니 프로젝트(예: 간단한 To-Do API 또는 CLI 도구) 기획→구현→테스트→문서화
   - CLAUDE.md·커스텀 커맨드 등 자신만의 설정을 적용
@@ -125,3 +131,7 @@ lessons/
 - [USG 공유대학 Agentic Coding 특강 - Lesson 1](https://drive.google.com/file/d/1GDb72t-8lCKDdlQT-pbHayfGrJKLtz4R/view?usp=share_link)
 - [USG 공유대학 Agentic Coding 특강 - Lesson 2](https://drive.google.com/file/d/1iqumZuaDQuqSnqOOk22DRNZsnGzHBEM7/view?usp=share_link)
 - [USG 공유대학 Agentic Coding 특강 - Lesson 3](https://drive.google.com/file/d/1ukd3EidqjSuSXDZ0akfK0I_ZRyE5wzVm/view?usp=share_link)
+- [USG 공유대학 Agentic Coding 특강 - Lesson 4](https://drive.google.com/file/d/1VN3vF8pDaECyjLN-5kkqZuNTIJLicsOe/view?usp=share_link)  
+- [USG 공유대학 Agentic Coding 특강 - Lesson 5](https://drive.google.com/file/d/1qJBM20sazQwDqmG1JMuGhFsDU24AATJ5/view?usp=share_link)  
+- [USG 공유대학 Agentic Coding 특강 - Lesson 6](https://drive.google.com/file/d/1KvR9OwVGZAvIxWgRK1TmvfIrHDmNb9cr/view?usp=share_link)  
+
