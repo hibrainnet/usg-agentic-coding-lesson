@@ -160,7 +160,7 @@
 
 또는 세션 이름/ID 직접 지정:
 ```
-> /resume contact-book-작업
+> /resume todo-cli-작업
 ```
 
 별칭: `/continue`
@@ -313,7 +313,7 @@ claude --resume    # 또는  claude -r
 
 또는 작업을 함께 입력:
 ```
-> /plan contact-book에 즐겨찾기 기능 추가
+> /plan todo.py에 우선순위 필드 추가
 ```
 
 **방법 2 — 요청에 명시**:
@@ -624,10 +624,10 @@ claude --print "프롬프트"
 claude -p "프롬프트"
 
 # 파일 내용 파이프
-cat contacts.py | claude -p "이 코드의 문제점을 찾아줘"
+cat todo.py | claude -p "이 코드의 문제점을 찾아줘"
 
 # 결과 파일 저장
-claude -p "contacts.py 문서 초안 작성" > docs/contacts.md
+claude -p "todo.py 문서 초안 작성" > docs/todo.md
 
 # 여러 파일 처리 스크립트
 for f in *.py; do
@@ -664,10 +664,10 @@ claude --no-markdown -p "결과를 순수 텍스트로"
 
 **파일 수정 시**:
 ```diff
-contacts.py를 수정하려고 합니다:
+todo.py를 수정하려고 합니다:
 
--     contacts.append({"name": name, "phone": phone})
-+     contacts.append({"id": new_id, "name": name, "phone": phone, "email": ""})
+-     todos.append({"text": text, "done": False})
++     todos.append({"text": text, "done": False, "priority": 2})
 
 허용하시겠습니까?
 ❯ 1. 예 — 이번만
@@ -679,7 +679,7 @@ contacts.py를 수정하려고 합니다:
 **명령 실행 시**:
 ```
 다음을 실행하려고 합니다:
-  $ pytest test_contacts.py -v
+  $ pytest test_todo.py -v
 
 실행하시겠습니까?
 ❯ 1. 예 — 이번만
