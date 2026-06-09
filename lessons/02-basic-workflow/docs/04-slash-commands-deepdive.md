@@ -132,7 +132,7 @@
 
 또는 압축 방향을 직접 지정:
 ```
-> /compact 이메일 검증 기능 추가 중. validate_email 완료. 다음은 테스트 작성.
+> /compact complete_todo 버그 수정 중. complete_todo 완료. 다음은 테스트 작성.
 ```
 
 **언제 쓰나**:
@@ -177,7 +177,7 @@ claude --resume    # 또는  claude -r
 **역할**: 현재 대화 지점에서 새로운 분기를 만듭니다. 다른 접근법을 시도해보고 싶을 때 유용합니다.
 
 ```
-> /branch 이메일검증-접근법2
+> /branch 우선순위기능-접근법2
 ```
 
 별칭: `/fork`
@@ -432,7 +432,7 @@ claude --resume    # 또는  claude -r
 
 ```
 > /simplify
-> /simplify storage.py
+> /simplify todo.py
 ```
 
 ---
