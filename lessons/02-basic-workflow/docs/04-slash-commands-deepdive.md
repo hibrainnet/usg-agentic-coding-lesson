@@ -115,7 +115,7 @@
 
 **혼자 해보기**:
 ```
-1. > contacts.py의 add_contact를 설명해줘
+1. > todo.py의 add_todo를 설명해줘
 2. > /clear
 3. > 방금 내가 뭘 물어봤는지 기억해?   ← 기억 못함 확인
 ```
@@ -251,7 +251,7 @@ claude --resume    # 또는  claude -r
 
 **혼자 해보기**:
 ```
-1. examples/contact-book/ 이동
+1. examples/todo-cli/ 이동
 2. > /init
 3. 생성된 CLAUDE.md 확인
 4. 코딩 규칙 섹션 직접 추가
@@ -841,7 +841,7 @@ git checkout .    # 모든 변경 되돌리기
 
 ### 실습 1: 커맨드 탐험 (5분)
 
-`examples/contact-book/`에서 시작합니다.
+`examples/todo-cli/`에서 시작합니다.
 
 ```
 > /help
@@ -869,9 +869,9 @@ git checkout .    # 모든 변경 되돌리기
 
 ```
 1. claude 실행
-2. > contacts.py의 add_contact 함수를 설명해줘
-3. > delete_contact 함수는?
-4. > search_contacts는?
+2. > todo.py의 add_todo 함수를 설명해줘
+3. > list_todos 함수는?
+4. > complete_todo는?
 5. > /usage    ← 토큰 사용량 기록
 6. > /compact
 7. > /usage    ← 줄어든 것 확인
