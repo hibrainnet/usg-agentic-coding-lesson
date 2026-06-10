@@ -1,0 +1,36 @@
+# 1교시. Agentic Coding 입문
+
+> 6시간 강의의 출발점입니다. 설치 없이 개념과 철학을 먼저 잡습니다. 환경 설정은 2교시에서 진행합니다.
+
+## ⏱️ 이번 시간(60분) 구성
+
+| 시간 | 내용 | 형태 | 자료 |
+|------|------|------|------|
+| 0~5분 | 오리엔테이션: 6시간 강의 전체 흐름 안내 | 강의 | `../../README.md` |
+| 5~30분 | Agentic Coding이란? 패러다임의 변화·작업 루프·한계 | 강의 | [docs/01-what-is-agentic-coding.md](docs/01-what-is-agentic-coding.md) |
+| 30~45분 | Claude Code 깊이 보기: 정체·특징·권한·도구 비교 | 강의 | [docs/02-why-claude-code.md](docs/02-why-claude-code.md) |
+| 45~57분 | 라이브 데모 관찰 + 개념 토론 | 토론 | (강사 시연) |
+| 57~60분 | Q&A + 다음 시간 예고 | — | — |
+
+## 🎯 학습 목표
+
+- Agentic Coding의 개념과 일반 코드 자동완성(Copilot 등)과의 차이를 설명할 수 있다.
+- 에이전트의 탐색→계획→실행→검증 루프를 이해하고, 사람의 역할이 무엇인지 설명할 수 있다.
+- Claude Code의 도구(Tools) 시스템과 컨텍스트 윈도우 개념을 설명할 수 있다.
+
+## 📂 자료 안내
+
+- [docs/01-what-is-agentic-coding.md](docs/01-what-is-agentic-coding.md) — Agentic Coding 개념·루프·한계
+- [docs/02-why-claude-code.md](docs/02-why-claude-code.md) — Claude Code 소개 · 도구(Tools) 시스템 · 컨텍스트 윈도우 · 권한 시스템
+
+## ✅ 이번 시간 산출물(체크리스트)
+
+- [ ] Agentic Coding과 코드 자동완성의 차이를 설명할 수 있다
+- [ ] 탐색→계획→실행→검증 루프를 그림/말로 설명할 수 있다
+- [ ] Claude Code가 내부적으로 어떤 도구를 사용하는지 설명할 수 있다
+- [ ] 컨텍스트 윈도우가 무엇인지, 왜 `/clear`를 쓰는지 설명할 수 있다
+- [ ] "위임하되, 검증하라"는 원칙의 의미를 이해한다
+
+## 🔜 다음 시간 예고
+
+2교시에서는 **개발 환경을 직접 설치**하고, 샘플 프로젝트를 Claude Code로 탐색·수정하는 첫 번째 실습을 진행합니다. macOS 또는 Windows 노트북을 준비하세요.

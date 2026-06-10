@@ -20,6 +20,7 @@
 
 ## 1교시. Agentic Coding 입문
 
+- **📂 수업 자료**: [lessons/lesson-01/README.md](lessons/lesson-01/README.md)
 - **핵심 개념**: Agentic Coding이란 무엇인가 (자동완성 → 에이전트 협업으로의 패러다임 변화), LLM 코딩 도구의 종류와 Claude Code의 위치
 - **학습 목표**
   - Agentic Coding의 개념과 일반 코드 자동완성(Copilot 등)과의 차이를 설명할 수 있다.
@@ -33,6 +34,7 @@
 
 ## 2교시. 개발 환경 설정과 기본 워크플로우
 
+- **📂 수업 자료**: [lessons/lesson-02/README.md](lessons/lesson-02/README.md)
 - **핵심 개념**: OS별 개발 환경 구성 (macOS · Windows), Claude Code와 함께하는 코드 탐색·수정·질문 사이클, 에이전트의 작업 루프 실물 체험
 - **학습 목표**
   - macOS 또는 Windows 환경에 개발 도구(터미널·Git·Python·VSCode·Claude Code)를 설치하고 동작을 확인할 수 있다.
@@ -49,6 +51,7 @@
 
 ## 3교시. 효과적인 프롬프팅과 컨텍스트 관리
 
+- **📂 수업 자료**: [lessons/lesson-03/README.md](lessons/lesson-03/README.md)
 - **핵심 개념**: 좋은 요청 작성법(명확성·범위·예시), CLAUDE.md를 통한 프로젝트 컨텍스트 주입, 컨텍스트 윈도우 관리, 계획 모드(Plan Mode)
 - **학습 목표**
   - 모호한 요청과 좋은 요청의 차이를 이해하고 효과적인 프롬프트를 작성할 수 있다.
@@ -63,6 +66,7 @@
 
 ## 4교시. 실전 개발: 기능 구현부터 디버깅·테스트까지
 
+- **📂 수업 자료**: [lessons/lesson-04/README.md](lessons/lesson-04/README.md)
 - **핵심 개념**: TDD 스타일 협업, 점진적 기능 구현, 에러 메시지/스택트레이스 기반 디버깅, 테스트 작성·실행, Git 연동(커밋·PR)
 - **학습 목표**
   - 작은 기능을 요구사항부터 구현·테스트까지 에이전트와 함께 완성할 수 있다.
@@ -77,6 +81,7 @@
 
 ## 5교시. 자동화와 확장: 커스텀 커맨드·훅·MCP·서브에이전트
 
+- **📂 수업 자료**: [lessons/lesson-05/README.md](lessons/lesson-05/README.md)
 - **핵심 개념**: 반복 작업 자동화(커스텀 슬래시 커맨드), 훅(Hooks)으로 동작 제어, MCP 서버로 외부 도구·데이터 연결, 서브에이전트로 작업 분리
 - **학습 목표**
   - 자주 쓰는 작업을 커스텀 커맨드/훅으로 자동화할 수 있다.
@@ -91,6 +96,7 @@
 
 ## 6교시. 종합 프로젝트와 베스트 프랙티스
 
+- **📂 수업 자료**: [lessons/lesson-06/README.md](lessons/lesson-06/README.md)
 - **핵심 개념**: 앞선 모든 내용을 결합한 미니 프로젝트, 안전한 사용·검증 습관, 한계와 주의점, 효율적 협업 워크플로우 정립
 - **학습 목표**
   - 처음부터 끝까지 작은 프로젝트를 에이전트와 함께 완성할 수 있다.
@@ -111,12 +117,12 @@
 
 ```
 lessons/
-├── 01-intro-setup/
-├── 02-basic-workflow/
-├── 03-prompting-context/
-├── 04-real-development/
-├── 05-automation-extension/
-└── 06-capstone-project/
+├── lesson-01/
+├── lesson-02/
+├── lesson-03/
+├── lesson-04/
+├── lesson-05/
+└── lesson-06/
 ```
 
 각 lesson 디렉토리는 다음 하위 구조를 가진다.
