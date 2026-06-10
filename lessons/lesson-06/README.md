@@ -4,7 +4,7 @@
 > 아이디어 → 기획 → 구현 → 테스트 → 문서화 → 회고까지,
 > 에이전트와 함께하는 **전체 개발 사이클**을 처음부터 끝까지 경험합니다.
 
-## ⏱️ 이번 시간(60분) 구성
+## ⏱️ 이번 시간 구성
 
 | 시간 | 내용 | 형태 | 자료 |
 |------|------|------|------|
@@ -26,9 +26,9 @@
 - [docs/01-best-practices.md](docs/01-best-practices.md) — 베스트 프랙티스, 주의점, 효율적 협업 패턴 정리
 
 ### 실습 튜토리얼 (순서대로 진행)
-1. [tutorials/01-mini-project-planning.md](tutorials/01-mini-project-planning.md) — **기획** (요구사항 정의, CLAUDE.md 작성, 10분)
-2. [tutorials/02-mini-project-implement.md](tutorials/02-mini-project-implement.md) — **구현·테스트·문서화** (30분)
-3. [tutorials/03-retrospective.md](tutorials/03-retrospective.md) — **회고** (회고 가이드 & 체크리스트, 10분)
+1. [tutorials/01-mini-project-planning.md](tutorials/01-mini-project-planning.md) — **기획** (요구사항 정의, CLAUDE.md 작성)
+2. [tutorials/02-mini-project-implement.md](tutorials/02-mini-project-implement.md) — **구현·테스트·문서화**
+3. [tutorials/03-retrospective.md](tutorials/03-retrospective.md) — **회고** (회고 가이드 & 체크리스트)
 
 ### 예제 자료
 - `examples/note-cli/` — 미니 프로젝트 시작 스캐폴드 (구현 참고용 뼈대 코드)

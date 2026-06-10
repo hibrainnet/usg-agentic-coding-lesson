@@ -3,7 +3,7 @@
 > 3교시에서 CLAUDE.md와 프롬프팅을 익혔다면, 이번 시간에는 **실제 개발 사이클** 전체를 에이전트와 함께 경험합니다.
 > 요구사항 → 구현 → 테스트 → 디버깅 → 커밋까지, 현업에서 쓰는 워크플로우를 그대로 따라합니다.
 
-## ⏱️ 이번 시간(60분) 구성
+## ⏱️ 이번 시간 구성
 
 | 시간 | 내용 | 형태 | 자료 |
 |------|------|------|------|
@@ -26,9 +26,9 @@
 - [docs/02-debugging-loop.md](docs/02-debugging-loop.md) — 에러 기반 디버깅 루프
 
 ### 실습 튜토리얼 (순서대로 진행)
-1. [tutorials/01-feature-implementation.md](tutorials/01-feature-implementation.md) — **기능 구현** (요구사항 → 테스트 작성 → 구현, 20분)
-2. [tutorials/02-debugging-practice.md](tutorials/02-debugging-practice.md) — **버그 찾기와 수정** (에러 로그 기반 디버깅, 20분)
-3. [tutorials/03-git-workflow.md](tutorials/03-git-workflow.md) — **Git 커밋과 PR** (변경 사항 커밋, 15분)
+1. [tutorials/01-feature-implementation.md](tutorials/01-feature-implementation.md) — **기능 구현** (요구사항 → 테스트 작성 → 구현)
+2. [tutorials/02-debugging-practice.md](tutorials/02-debugging-practice.md) — **버그 찾기와 수정** (에러 로그 기반 디버깅)
+3. [tutorials/03-git-workflow.md](tutorials/03-git-workflow.md) — **Git 커밋과 PR** (변경 사항 커밋)
 
 ### 예제 자료
 - `examples/task-manager/` — 실습용 태스크 관리 앱 (버그 포함, 구현할 기능 포함)

@@ -4,7 +4,7 @@
 > 이번 시간에는 **반복 작업을 자동화**하고, 에이전트의 능력을 **외부 도구까지 확장**합니다.  
 > 4교시에서 만든 task-manager를 그대로 이어받아, 나만의 워크플로우를 완성합니다.
 
-## ⏱️ 이번 시간(60분) 구성
+## ⏱️ 이번 시간 구성
 
 | 시간 | 내용 | 형태 | 자료 |
 |------|------|------|------|
@@ -32,10 +32,10 @@
 - [docs/04-subagents.md](docs/04-subagents.md) — 서브에이전트 개념과 비교표
 
 ### 실습 튜토리얼 (순서대로 진행)
-1. [tutorials/01-skills.md](tutorials/01-skills.md) — **스킬 만들기** (15분)
-2. [tutorials/02-hooks.md](tutorials/02-hooks.md) — **훅 설정** (15분)
-3. [tutorials/03-mcp.md](tutorials/03-mcp.md) — **MCP 서버 연결** (12분)
-4. [tutorials/04-subagents.md](tutorials/04-subagents.md) — **서브에이전트** (10분)
+1. [tutorials/01-skills.md](tutorials/01-skills.md) — **스킬 만들기**
+2. [tutorials/02-hooks.md](tutorials/02-hooks.md) — **훅 설정**
+3. [tutorials/03-mcp.md](tutorials/03-mcp.md) — **MCP 서버 연결**
+4. [tutorials/04-subagents.md](tutorials/04-subagents.md) — **서브에이전트**
 
 ### 예제 자료
 - `examples/task-manager/` — 4교시 완성본 (5교시 실습 시작 코드)

@@ -1,4 +1,4 @@
-# [실습] CLAUDE.md 작성하기
+# 실습 3: CLAUDE.md 작성하기
 
 > 🎯 목표: contact-book 프로젝트용 CLAUDE.md를 만들고, 있을 때와 없을 때의 차이를 확인한다.
 > ⏱️ 예상 시간: 15분
