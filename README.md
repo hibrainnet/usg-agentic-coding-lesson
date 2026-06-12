@@ -1,6 +1,11 @@
 # Claude Code를 활용한 Agentic Coding
 
+> 대상 : USG 공유대학교
 > 컴퓨터공학 전공 4학년 대상 · 6시간 온라인 강의 · 실습 따라하기 중심
+>
+> 강사 : 하이브레인넷 (http://www.hibrain.net) 연구원
+
+
 
 ## 강의 개요
 
