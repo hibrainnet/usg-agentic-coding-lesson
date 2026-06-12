@@ -4,12 +4,12 @@
 
 ## ⏱️ 이번 시간(60분) 구성
 
-| 시간 | 내용 | 형태 | 자료 |
-|------|------|------|------|
-| 0~5분 | 오리엔테이션 + 1교시 핵심 복습 | 강의 | — |
-| 5~35분 | **환경 설정 실습** (OS별 트랙) | 따라하기 | [tutorials/01-macos-setup.md](tutorials/01-macos-setup.md) / `02-windows-setup.md` |
-| 35~55분 | **첫 번째 워크플로우** (샘플 프로젝트 탐색·수정) | 따라하기 | [tutorials/03-first-workflow.md](tutorials/03-first-workflow.md) |
-| 55~60분 | Q&A + 다음 시간 예고 | — | — |
+| 시간 | 내용 | 자료 |
+|------|------|------|
+| 0~5분 | 오리엔테이션 + 1교시 핵심 복습 | — |
+| 5~35분 | **환경 설정 실습** (OS별 트랙) | [실습 (macOS)](tutorials/01-macos-setup.md) · [실습 (Windows)](tutorials/02-windows-setup.md) |
+| 35~55분 | **첫 번째 워크플로우** (샘플 프로젝트 탐색·수정) | [실습](tutorials/03-first-workflow.md) |
+| 55~60분 | Q&A + 다음 시간 예고 | — |
 
 > macOS와 Windows가 섞여 있을 경우, 각자 자신의 OS 튜토리얼을 따라가면 됩니다.
 
@@ -22,13 +22,13 @@
 
 ## 📂 자료 안내
 
-- [docs/01-environment-setup.md](docs/01-environment-setup.md) — 설치 개요: 무엇을 왜 설치하는가
-- [docs/02-basic-workflow.md](docs/02-basic-workflow.md) — 기본 워크플로우 개념: 탐색·질문·수정·검증
-- [docs/03-slash-commands.md](docs/03-slash-commands.md) — 슬래시 커맨드 & CLI 전체 목록 (빠른 참고용)
-- [docs/04-slash-commands-deepdive.md](docs/04-slash-commands-deepdive.md) — 슬래시 커맨드 전체 상세 설명 (자습 레퍼런스 — 실전 활용은 3교시에서 다룸)
-- [tutorials/01-macos-setup.md](tutorials/01-macos-setup.md) — **macOS 환경 설정 따라하기** (Ghostty · Homebrew · Git · Python3 · VSCode · Claude Code)
-- [tutorials/02-windows-setup.md](tutorials/02-windows-setup.md) — **Windows 환경 설정 따라하기** (Windows Terminal · Git · Python3 · VSCode · Claude Code)
-- [tutorials/03-first-workflow.md](tutorials/03-first-workflow.md) — **첫 번째 워크플로우** (To-Do CLI 탐색·수정)
+- [개발 환경 구성 개요](docs/01-environment-setup.md) — 설치 개요: 무엇을 왜 설치하는가
+- [기본 워크플로우: 탐색·질문·수정·검증](docs/02-basic-workflow.md) — 기본 워크플로우 개념: 탐색·질문·수정·검증
+- [슬래시 커맨드 & CLI 개요](docs/03-slash-commands.md) — 슬래시 커맨드 & CLI 전체 목록 (빠른 참고용)
+- [슬래시 커맨드 심화 가이드](docs/04-slash-commands-deepdive.md) — 슬래시 커맨드 전체 상세 설명 (자습 레퍼런스 — 실전 활용은 3교시에서 다룸)
+- [실습 1: macOS 환경 설정](tutorials/01-macos-setup.md) — **macOS 환경 설정 따라하기** (Ghostty · Homebrew · Git · Python3 · VSCode · Claude Code)
+- [실습 2: Windows 환경 설정](tutorials/02-windows-setup.md) — **Windows 환경 설정 따라하기** (Windows Terminal · Git · Python3 · VSCode · Claude Code)
+- [실습 3: 첫 번째 워크플로우](tutorials/03-first-workflow.md) — **첫 번째 워크플로우** (To-Do CLI 탐색·수정)
 - `examples/todo-cli/` — 실습용 샘플 프로젝트
 
 ## ✅ 이번 시간 산출물(체크리스트)

@@ -4,13 +4,13 @@
 
 ## ⏱️ 이번 시간(60분) 구성
 
-| 시간 | 내용 | 형태 | 자료 |
-|------|------|------|------|
-| 0~5분 | 오리엔테이션: 6시간 강의 전체 흐름 안내 | 강의 | `../../README.md` |
-| 5~30분 | Agentic Coding이란? 패러다임의 변화·작업 루프·한계 | 강의 | [docs/01-what-is-agentic-coding.md](docs/01-what-is-agentic-coding.md) |
-| 30~45분 | Claude Code 깊이 보기: 정체·특징·권한·도구 비교 | 강의 | [docs/02-why-claude-code.md](docs/02-why-claude-code.md) |
-| 45~57분 | 라이브 데모 관찰 + 개념 토론 | 토론 | (강사 시연) |
-| 57~60분 | Q&A + 다음 시간 예고 | — | — |
+| 시간 | 내용 | 자료 |
+|------|------|------|
+| 0~5분 | 오리엔테이션: 6시간 강의 전체 흐름 안내 | `../../README.md` |
+| 5~30분 | Agentic Coding이란? 패러다임의 변화·작업 루프·한계 | [강의자료](docs/01-what-is-agentic-coding.md) |
+| 30~45분 | Claude Code 깊이 보기: 정체·특징·권한·도구 비교 | [강의자료](docs/02-why-claude-code.md) |
+| 45~57분 | 라이브 데모 관찰 + 개념 토론 | (강사 시연) |
+| 57~60분 | Q&A + 다음 시간 예고 | — |
 
 ## 🎯 학습 목표
 
@@ -20,8 +20,8 @@
 
 ## 📂 자료 안내
 
-- [docs/01-what-is-agentic-coding.md](docs/01-what-is-agentic-coding.md) — Agentic Coding 개념·루프·한계
-- [docs/02-why-claude-code.md](docs/02-why-claude-code.md) — Claude Code 소개 · 도구(Tools) 시스템 · 컨텍스트 윈도우 · 권한 시스템
+- [Agentic Coding이란 무엇인가?](docs/01-what-is-agentic-coding.md) — Agentic Coding 개념·루프·한계
+- [Claude Code 깊이 들여다보기](docs/02-why-claude-code.md) — Claude Code 소개 · 도구(Tools) 시스템 · 컨텍스트 윈도우 · 권한 시스템
 
 ## ✅ 이번 시간 산출물(체크리스트)
 

@@ -5,13 +5,13 @@
 
 ## ⏱️ 이번 시간 구성
 
-| 시간 | 내용 | 형태 | 자료 |
-|------|------|------|------|
-| 0~5분 | 오리엔테이션 + 3교시 복습 | 강의 | — |
-| 5~20분 | **TDD 스타일 기능 구현** — 요구사항 → 테스트 → 구현 순서로 | 강의 + 따라하기 | [docs/01-tdd-with-agent.md](docs/01-tdd-with-agent.md) · [tutorials/01-feature-implementation.md](tutorials/01-feature-implementation.md) |
-| 20~40분 | **에러 기반 디버깅** — 스택트레이스를 에이전트에게 넘기기 | 강의 + 따라하기 | [docs/02-debugging-loop.md](docs/02-debugging-loop.md) · [tutorials/02-debugging-practice.md](tutorials/02-debugging-practice.md) |
-| 40~55분 | **Git 연동** — 커밋 메시지 작성, (선택) PR 생성 | 따라하기 | [tutorials/03-git-workflow.md](tutorials/03-git-workflow.md) |
-| 55~60분 | Q&A + 다음 시간 예고 | — | — |
+| 시간 | 내용 | 자료 |
+|------|------|------|
+| 0~5분 | 오리엔테이션 + 3교시 복습 | — |
+| 5~20분 | **TDD 스타일 기능 구현** — 요구사항 → 테스트 → 구현 순서로 | [강의자료](docs/01-tdd-with-agent.md) · [실습](tutorials/01-feature-implementation.md) |
+| 20~40분 | **에러 기반 디버깅** — 스택트레이스를 에이전트에게 넘기기 | [강의자료](docs/02-debugging-loop.md) · [실습](tutorials/02-debugging-practice.md) |
+| 40~55분 | **Git 연동** — 커밋 메시지 작성, (선택) PR 생성 | [실습](tutorials/03-git-workflow.md) |
+| 55~60분 | Q&A + 다음 시간 예고 | — |
 
 ## 🎯 학습 목표
 
@@ -22,13 +22,13 @@
 ## 📂 자료 안내
 
 ### 개념 문서
-- [docs/01-tdd-with-agent.md](docs/01-tdd-with-agent.md) — TDD 스타일 에이전트 협업 패턴
-- [docs/02-debugging-loop.md](docs/02-debugging-loop.md) — 에러 기반 디버깅 루프
+- [TDD 스타일 에이전트 협업](docs/01-tdd-with-agent.md) — TDD 스타일 에이전트 협업 패턴
+- [에러 기반 디버깅 루프](docs/02-debugging-loop.md) — 에러 기반 디버깅 루프
 
 ### 실습 튜토리얼 (순서대로 진행)
-1. [tutorials/01-feature-implementation.md](tutorials/01-feature-implementation.md) — **기능 구현** (요구사항 → 테스트 작성 → 구현)
-2. [tutorials/02-debugging-practice.md](tutorials/02-debugging-practice.md) — **버그 찾기와 수정** (에러 로그 기반 디버깅)
-3. [tutorials/03-git-workflow.md](tutorials/03-git-workflow.md) — **Git 커밋과 PR** (변경 사항 커밋)
+1. [실습 1: TDD 스타일 기능 구현](tutorials/01-feature-implementation.md) — **기능 구현** (요구사항 → 테스트 작성 → 구현)
+2. [실습 2: 버그 찾기와 수정](tutorials/02-debugging-practice.md) — **버그 찾기와 수정** (에러 로그 기반 디버깅)
+3. [실습 3: Git 커밋과 PR](tutorials/03-git-workflow.md) — **Git 커밋과 PR** (변경 사항 커밋)
 
 ### 예제 자료
 - `examples/task-manager/` — 실습용 태스크 관리 앱 (버그 포함, 구현할 기능 포함)

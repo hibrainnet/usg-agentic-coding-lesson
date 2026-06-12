@@ -5,14 +5,14 @@
 
 ## ⏱️ 이번 시간(60분) 구성
 
-| 시간 | 내용 | 형태 | 자료 |
-|------|------|------|------|
-| 0~5분 | 오리엔테이션 + 2교시 복습 | 강의 | — |
-| 5~20분 | **핵심 커맨드 실전** — 상황별로 언제 어떤 커맨드를 쓰는가 | 따라하기 | [tutorials/00-key-commands.md](tutorials/00-key-commands.md) |
-| 20~35분 | **효과적인 프롬프팅** — 좋은 요청의 구조와 비교 실습 | 강의 + 따라하기 | [docs/01-effective-prompting.md](docs/01-effective-prompting.md) · [tutorials/01-prompt-comparison.md](tutorials/01-prompt-comparison.md) |
-| 35~50분 | **CLAUDE.md 작성** — `/init`으로 생성, 규칙 추가, 효과 확인 | 따라하기 | [tutorials/02-create-claude-md.md](tutorials/02-create-claude-md.md) |
-| 50~57분 | **계획 모드** — `/plan`으로 복잡한 작업 사전 설계 | 따라하기 | [tutorials/03-plan-mode.md](tutorials/03-plan-mode.md) |
-| 57~60분 | Q&A + 다음 시간 예고 | — | — |
+| 시간 | 내용 | 자료 |
+|------|------|------|
+| 0~5분 | 오리엔테이션 + 2교시 복습 | — |
+| 5~20분 | **핵심 커맨드 실전** — 상황별로 언제 어떤 커맨드를 쓰는가 | [실습](tutorials/00-key-commands.md) |
+| 20~35분 | **효과적인 프롬프팅** — 좋은 요청의 구조와 비교 실습 | [강의자료](docs/01-effective-prompting.md) · [실습](tutorials/01-prompt-comparison.md) |
+| 35~50분 | **CLAUDE.md 작성** — `/init`으로 생성, 규칙 추가, 효과 확인 | [실습](tutorials/02-create-claude-md.md) |
+| 50~57분 | **계획 모드** — `/plan`으로 복잡한 작업 사전 설계 | [실습](tutorials/03-plan-mode.md) |
+| 57~60분 | Q&A + 다음 시간 예고 | — |
 
 > 커맨드 실전(5~20분)은 2교시에서 참고만 한 `/compact`, `/code-review`, `/model`, `/rewind` 등을 맥락 안에서 처음 실습하는 시간입니다.
 
@@ -26,15 +26,15 @@
 ## 📂 자료 안내
 
 ### 개념 문서
-- [docs/01-effective-prompting.md](docs/01-effective-prompting.md) — 좋은 프롬프트의 5가지 구성 요소
-- [docs/02-context-management.md](docs/02-context-management.md) — CLAUDE.md, `/compact`, 계획 모드
+- [효과적인 프롬프팅](docs/01-effective-prompting.md) — 좋은 프롬프트의 5가지 구성 요소
+- [컨텍스트 관리: CLAUDE.md와 계획 모드](docs/02-context-management.md) — CLAUDE.md, `/compact`, 계획 모드
 
 ### 실습 튜토리얼 (순서대로 진행)
-1. [tutorials/00-key-commands.md](tutorials/00-key-commands.md) — **핵심 커맨드 실전** (시나리오 5개로 /usage·/compact·/model·/code-review·/rewind 체험)
-2. [tutorials/01-prompt-comparison.md](tutorials/01-prompt-comparison.md) — **나쁜 vs 좋은 프롬프트 비교** (contact-book, 15분)
-3. [tutorials/01b-prompt-comparison-advanced.md](tutorials/01b-prompt-comparison-advanced.md) — **프롬프트 비교 심화** (grade-manager, 실패 유형 3가지 직접 재현, 25분)
-4. [tutorials/02-create-claude-md.md](tutorials/02-create-claude-md.md) — **CLAUDE.md 작성** (/init → 규칙 추가 → 효과 확인)
-5. [tutorials/03-plan-mode.md](tutorials/03-plan-mode.md) — **계획 모드** (/plan으로 복잡한 기능 사전 설계)
+1. [실습 1: 핵심 슬래시 커맨드 실전 활용](tutorials/00-key-commands.md) — **핵심 커맨드 실전** (시나리오 5개로 /usage·/compact·/model·/code-review·/rewind 체험)
+2. [실습 2: 나쁜 프롬프트 vs 좋은 프롬프트 비교](tutorials/01-prompt-comparison.md) — **나쁜 vs 좋은 프롬프트 비교** (contact-book, 15분)
+3. [심화 실습: 프롬프트 차이가 만드는 결과 비교](tutorials/01b-prompt-comparison-advanced.md) — **프롬프트 비교 심화** (grade-manager, 실패 유형 3가지 직접 재현, 25분)
+4. [실습 3: CLAUDE.md 작성하기](tutorials/02-create-claude-md.md) — **CLAUDE.md 작성** (/init → 규칙 추가 → 효과 확인)
+5. [실습 4: 계획 모드로 복잡한 작업 설계하기](tutorials/03-plan-mode.md) — **계획 모드** (/plan으로 복잡한 기능 사전 설계)
 
 > 시간이 충분하면 01 → 01b 순서로, 시간이 부족하면 01b만 진행합니다. 01b가 더 극적인 차이를 보여줍니다.
 

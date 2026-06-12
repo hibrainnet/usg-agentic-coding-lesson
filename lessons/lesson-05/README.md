@@ -6,14 +6,14 @@
 
 ## ⏱️ 이번 시간 구성
 
-| 시간 | 내용 | 형태 | 자료 |
-|------|------|------|------|
-| 0~5분 | 오리엔테이션 + 4교시 복습 | 강의 | — |
-| 5~20분 | **스킬(Skill)** — 반복 작업을 나만의 명령어로 (커스텀 커맨드 통합) | 강의 + 따라하기 | [docs/01-skills.md](docs/01-skills.md) · [tutorials/01-skills.md](tutorials/01-skills.md) |
-| 20~35분 | **훅(Hooks)** — 특정 이벤트에 자동 실행 | 강의 + 따라하기 | [docs/02-hooks.md](docs/02-hooks.md) · [tutorials/02-hooks.md](tutorials/02-hooks.md) |
-| 35~47분 | **MCP 서버** — 외부 도구 연결 | 강의 + 따라하기 | [docs/03-mcp.md](docs/03-mcp.md) · [tutorials/03-mcp.md](tutorials/03-mcp.md) |
-| 47~57분 | **서브에이전트** — 작업 위임 패턴 | 강의 + 따라하기 | [docs/04-subagents.md](docs/04-subagents.md) · [tutorials/04-subagents.md](tutorials/04-subagents.md) |
-| 57~60분 | Q&A + 다음 시간 예고 | — | — |
+| 시간 | 내용 | 자료 |
+|------|------|------|
+| 0~5분 | 오리엔테이션 + 4교시 복습 | — |
+| 5~20분 | **스킬(Skill)** — 반복 작업을 나만의 명령어로 (커스텀 커맨드 통합) | [강의자료](docs/01-skills.md) · [실습](tutorials/01-skills.md) |
+| 20~35분 | **훅(Hooks)** — 특정 이벤트에 자동 실행 | [강의자료](docs/02-hooks.md) · [실습](tutorials/02-hooks.md) |
+| 35~47분 | **MCP 서버** — 외부 도구 연결 | [강의자료](docs/03-mcp.md) · [실습](tutorials/03-mcp.md) |
+| 47~57분 | **서브에이전트** — 작업 위임 패턴 | [강의자료](docs/04-subagents.md) · [실습](tutorials/04-subagents.md) |
+| 57~60분 | Q&A + 다음 시간 예고 | — |
 
 ## 🎯 학습 목표
 
@@ -26,16 +26,16 @@
 ## 📂 자료 안내
 
 ### 개념 문서
-- [docs/01-skills.md](docs/01-skills.md) — 스킬(Skill) 구조와 작성법, 커스텀 커맨드와의 관계
-- [docs/02-hooks.md](docs/02-hooks.md) — 훅 개념과 이벤트 종류
-- [docs/03-mcp.md](docs/03-mcp.md) — MCP 개념과 서버 연결 방법
-- [docs/04-subagents.md](docs/04-subagents.md) — 서브에이전트 개념과 비교표
+- [스킬(Skill): 나만의 명령어 만들기](docs/01-skills.md) — 스킬(Skill) 구조와 작성법, 커스텀 커맨드와의 관계
+- [훅(Hooks): 특정 시점에 자동 실행](docs/02-hooks.md) — 훅 개념과 이벤트 종류
+- [MCP(Model Context Protocol): 외부 도구 연결](docs/03-mcp.md) — MCP 개념과 서버 연결 방법
+- [서브에이전트: 탐색 작업 위임](docs/04-subagents.md) — 서브에이전트 개념과 비교표
 
 ### 실습 튜토리얼 (순서대로 진행)
-1. [tutorials/01-skills.md](tutorials/01-skills.md) — **스킬 만들기**
-2. [tutorials/02-hooks.md](tutorials/02-hooks.md) — **훅 설정**
-3. [tutorials/03-mcp.md](tutorials/03-mcp.md) — **MCP 서버 연결**
-4. [tutorials/04-subagents.md](tutorials/04-subagents.md) — **서브에이전트**
+1. [실습 1: 스킬(Skill) 만들기](tutorials/01-skills.md) — **스킬 만들기**
+2. [실습 2: 훅(Hooks) 설정](tutorials/02-hooks.md) — **훅 설정**
+3. [실습 3: MCP 서버 연결](tutorials/03-mcp.md) — **MCP 서버 연결**
+4. [실습 4: 서브에이전트](tutorials/04-subagents.md) — **서브에이전트**
 
 ### 예제 자료
 - `examples/task-manager/` — 4교시 완성본 (5교시 실습 시작 코드)

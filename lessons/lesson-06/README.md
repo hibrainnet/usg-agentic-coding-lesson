@@ -6,13 +6,13 @@
 
 ## ⏱️ 이번 시간 구성
 
-| 시간 | 내용 | 형태 | 자료 |
-|------|------|------|------|
-| 0~5분 | 오리엔테이션 + 전체 흐름 브리핑 | 강의 | — |
-| 5~15분 | **프로젝트 기획** — CLAUDE.md 작성, 요구사항 정의 | 따라하기 | [tutorials/01-mini-project-planning.md](tutorials/01-mini-project-planning.md) |
-| 15~45분 | **구현** — TDD, 디버깅, 커스텀 커맨드 활용 | 실습 | [tutorials/02-mini-project-implement.md](tutorials/02-mini-project-implement.md) |
-| 45~55분 | **마무리** — 커밋, README 작성 | 실습 | [tutorials/02-mini-project-implement.md](tutorials/02-mini-project-implement.md) |
-| 55~60분 | **회고** — 잘된 점·실수·체크리스트 | 토론 | [tutorials/03-retrospective.md](tutorials/03-retrospective.md) |
+| 시간 | 내용 | 자료 |
+|------|------|------|
+| 0~5분 | 오리엔테이션 + 전체 흐름 브리핑 | — |
+| 5~15분 | **프로젝트 기획** — CLAUDE.md 작성, 요구사항 정의 | [실습](tutorials/01-mini-project-planning.md) |
+| 15~45분 | **구현** — TDD, 디버깅, 커스텀 커맨드 활용 | [실습](tutorials/02-mini-project-implement.md) |
+| 45~55분 | **마무리** — 커밋, README 작성 | [실습](tutorials/02-mini-project-implement.md) |
+| 55~60분 | **회고** — 잘된 점·실수·체크리스트 | [실습](tutorials/03-retrospective.md) |
 
 ## 🎯 학습 목표
 
@@ -23,12 +23,12 @@
 ## 📂 자료 안내
 
 ### 개념 문서
-- [docs/01-best-practices.md](docs/01-best-practices.md) — 베스트 프랙티스, 주의점, 효율적 협업 패턴 정리
+- [베스트 프랙티스와 주의점](docs/01-best-practices.md) — 베스트 프랙티스, 주의점, 효율적 협업 패턴 정리
 
 ### 실습 튜토리얼 (순서대로 진행)
-1. [tutorials/01-mini-project-planning.md](tutorials/01-mini-project-planning.md) — **기획** (요구사항 정의, CLAUDE.md 작성)
-2. [tutorials/02-mini-project-implement.md](tutorials/02-mini-project-implement.md) — **구현·테스트·문서화**
-3. [tutorials/03-retrospective.md](tutorials/03-retrospective.md) — **회고** (회고 가이드 & 체크리스트)
+1. [실습 1: 미니 프로젝트 기획](tutorials/01-mini-project-planning.md) — **기획** (요구사항 정의, CLAUDE.md 작성)
+2. [실습 2: 구현·테스트·문서화](tutorials/02-mini-project-implement.md) — **구현·테스트·문서화**
+3. [실습 3: 회고](tutorials/03-retrospective.md) — **회고** (회고 가이드 & 체크리스트)
 
 ### 예제 자료
 - `examples/note-cli/` — 미니 프로젝트 시작 스캐폴드 (구현 참고용 뼈대 코드)
